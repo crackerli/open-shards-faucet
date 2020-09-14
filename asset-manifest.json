@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/open-shards-faucet/static/js/main.92b3cf7a.chunk.js",
-    "main.js.map": "/open-shards-faucet/static/js/main.92b3cf7a.chunk.js.map",
+    "main.js": "/open-shards-faucet/static/js/main.e2578354.chunk.js",
+    "main.js.map": "/open-shards-faucet/static/js/main.e2578354.chunk.js.map",
     "runtime-main.js": "/open-shards-faucet/static/js/runtime-main.53ce1927.js",
     "runtime-main.js.map": "/open-shards-faucet/static/js/runtime-main.53ce1927.js.map",
     "static/js/2.8f3da90d.chunk.js": "/open-shards-faucet/static/js/2.8f3da90d.chunk.js",
     "static/js/2.8f3da90d.chunk.js.map": "/open-shards-faucet/static/js/2.8f3da90d.chunk.js.map",
     "index.html": "/open-shards-faucet/index.html",
-    "precache-manifest.104ed2755e3dda6b6aac88212282fa90.js": "/open-shards-faucet/precache-manifest.104ed2755e3dda6b6aac88212282fa90.js",
+    "precache-manifest.d727be7eeca94ec93f8bb0502efb690a.js": "/open-shards-faucet/precache-manifest.d727be7eeca94ec93f8bb0502efb690a.js",
     "service-worker.js": "/open-shards-faucet/service-worker.js",
     "static/js/2.8f3da90d.chunk.js.LICENSE.txt": "/open-shards-faucet/static/js/2.8f3da90d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.53ce1927.js",
     "static/js/2.8f3da90d.chunk.js",
-    "static/js/main.92b3cf7a.chunk.js"
+    "static/js/main.e2578354.chunk.js"
   ]
 }
