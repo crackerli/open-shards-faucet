@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "30ce17b7c502ae8cb5e6ecf097fbf5b4",
+    "revision": "c4132a3ea522c4e5eb87d58599f20692",
     "url": "/open-shards-faucet/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/open-shards-faucet/static/js/2.b9da6ce7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "67149705e44f53c97aae",
-    "url": "/open-shards-faucet/static/js/main.975c5f7e.chunk.js"
+    "revision": "14ba478c6f64c045688d",
+    "url": "/open-shards-faucet/static/js/main.cab72a03.chunk.js"
   },
   {
     "revision": "3d91dd3b10654932bd12",
