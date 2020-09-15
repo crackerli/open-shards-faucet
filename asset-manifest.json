@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/open-shards-faucet/static/js/main.ca86fe0f.chunk.js",
-    "main.js.map": "/open-shards-faucet/static/js/main.ca86fe0f.chunk.js.map",
+    "main.js": "/open-shards-faucet/static/js/main.f8e63ece.chunk.js",
+    "main.js.map": "/open-shards-faucet/static/js/main.f8e63ece.chunk.js.map",
     "runtime-main.js": "/open-shards-faucet/static/js/runtime-main.53ce1927.js",
     "runtime-main.js.map": "/open-shards-faucet/static/js/runtime-main.53ce1927.js.map",
-    "static/js/2.b5ad2dca.chunk.js": "/open-shards-faucet/static/js/2.b5ad2dca.chunk.js",
-    "static/js/2.b5ad2dca.chunk.js.map": "/open-shards-faucet/static/js/2.b5ad2dca.chunk.js.map",
+    "static/js/2.c9c68e3b.chunk.js": "/open-shards-faucet/static/js/2.c9c68e3b.chunk.js",
+    "static/js/2.c9c68e3b.chunk.js.map": "/open-shards-faucet/static/js/2.c9c68e3b.chunk.js.map",
     "index.html": "/open-shards-faucet/index.html",
-    "precache-manifest.95c0119a08563856c75e845a73bbb32a.js": "/open-shards-faucet/precache-manifest.95c0119a08563856c75e845a73bbb32a.js",
+    "precache-manifest.f40e8e60e1eb4347735b6abaa3aa5c5b.js": "/open-shards-faucet/precache-manifest.f40e8e60e1eb4347735b6abaa3aa5c5b.js",
     "service-worker.js": "/open-shards-faucet/service-worker.js",
-    "static/js/2.b5ad2dca.chunk.js.LICENSE.txt": "/open-shards-faucet/static/js/2.b5ad2dca.chunk.js.LICENSE.txt"
+    "static/js/2.c9c68e3b.chunk.js.LICENSE.txt": "/open-shards-faucet/static/js/2.c9c68e3b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.53ce1927.js",
-    "static/js/2.b5ad2dca.chunk.js",
-    "static/js/main.ca86fe0f.chunk.js"
+    "static/js/2.c9c68e3b.chunk.js",
+    "static/js/main.f8e63ece.chunk.js"
   ]
 }
