@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/open-shards-faucet/precache-manifest.44bc65a8b82340dccd9276624b27858c.js"
+  "/open-shards-faucet/precache-manifest.69a5da792f81314f681109a3dc91bea4.js"
 );
 
 self.addEventListener('message', (event) => {
