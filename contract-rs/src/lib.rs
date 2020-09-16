@@ -93,10 +93,10 @@ impl TransferFaucet {
         );
 
         // Checking that the given hash is not used yet and remembering it.
-//        assert!(
-//            self.existing_hashes.insert(&hash),
-//            "The given hash is already used for transfer"
-//        );
+       assert!(
+           self.existing_hashes.insert(&hash),
+           "The given hash is already used for transfer"
+       );
 
         // Creating a transfer. It still can fail (e.g. account doesn't exists or the name is invalid),
         // but this contract will get the refund back.
