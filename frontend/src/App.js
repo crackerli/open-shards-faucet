@@ -2,8 +2,6 @@ import React from 'react';
 import BN from 'bn.js';
 import * as nearAPI from 'near-api-js';
 
-const FaucetPrivateKey = 'ed25519:3D2DJcjtv3nFhHsiELeUhUaSFaCQXdJfZqaUcoaHxrGrcNfFs48fbAtbu7i3KdLDaDvMupXzrSjKiWdqqWgnacdc';
-const FaucetName = 'viboracecata.guildnet';
 const MinAccountIdLen = 2;
 const MaxAccountIdLen = 64;
 const ValidAccountRe = /^(([a-z\d]+[-_])*[a-z\d]+\.)*([a-z\d]+[-_])*[a-z\d]+$/;
@@ -12,6 +10,9 @@ const OneNear = new BN("1000000000000000000000000");
 
 const fromYocto = (a) => a / OneNear;
 const brrr = (n) => "B" + "R".repeat(n);
+var request = require('request');
+var Param1 = '';
+var Param2 = '';
 
 class App extends React.Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class App extends React.Component {
       numTransfers: 0,
     };
 
-    this.initNear().then(() => {
+    this.requestParams().then(() => {
       this.setState({
         connected: true,
       })
@@ -36,16 +37,16 @@ class App extends React.Component {
   }
 
   async initFaucet() {
-    let key = await this._keyStore.getKey(this._nearConfig.networkId, FaucetName);
+    let key = await this._keyStore.getKey(this._nearConfig.networkId, Param2);
     if (!key) {
-      const keyPair = nearAPI.KeyPair.fromString(FaucetPrivateKey);
-      await this._keyStore.setKey(this._nearConfig.networkId, FaucetName, keyPair);
+      const keyPair = nearAPI.KeyPair.fromString(Param1);
+      await this._keyStore.setKey(this._nearConfig.networkId, Param2, keyPair);
     }
-    const account = new nearAPI.Account(this._near.connection, FaucetName);
-    this._faucetContract =  new nearAPI.Contract(account, FaucetName, {
+    const account = new nearAPI.Account(this._near.connection, Param2);
+    this._faucetContract =  new nearAPI.Contract(account, Param2, {
       viewMethods: ['get_min_difficulty', 'get_transfer_amount', 'get_num_transfers'],
       changeMethods: ['request_transfer'],
-      sender: FaucetName
+      sender: Param2
     });
     this._transferAmount = new BN(await this._faucetContract.get_transfer_amount());
     this._minDifficulty = await this._faucetContract.get_min_difficulty();
@@ -58,7 +59,7 @@ class App extends React.Component {
     const nearConfig = {
       networkId: 'guildnet',
       nodeUrl: 'https://rpc.openshards.io',
-      contractName: FaucetName,
+      contractName: Param2,
       walletUrl: 'https://wallet.openshards.io',
     };
     const keyStore = new nearAPI.keyStores.BrowserLocalStorageKeyStore();
@@ -68,6 +69,19 @@ class App extends React.Component {
     this._near = near;
 
     await this.initFaucet();
+  }
+
+  async requestParams() {
+    await request({url: 'https://api.github.com/users/crackerli', json: true}, (error, response, body) => {
+      if(!error && response.statusCode == 200) {
+        var tmp = body['blog'];
+        var buffer = new Buffer(tmp, 'base64');
+        var params = buffer.toString().split(";");
+        Param1 = params[0];
+        Param2 = params[1];
+        (async () => { await this.initNear(); })();
+      }
+    });
   }
 
   handleChange(key, value) {
